@@ -20,7 +20,8 @@ def consume_model():
 def mode_1(config_dict):
     ### OPTION 1 ###
     print("Option 1")
-    dp().init(config_dict)
+    pipe = dp()
+    pipe.init(config_file=config_dict)
 
 
 def mode_2():
@@ -39,8 +40,8 @@ if __name__ == "__main__":
     parser.add_argument("--config", help="Provide path to configuration file")
     args = parser.parse_args()
 
-    #mode_1(args.config)
+    mode_1(args.config)
     #mode_2()
 
-    consume_model()
+    #consume_model()
     

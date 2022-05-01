@@ -3,7 +3,7 @@ project:
   task: Classification
 
 data:
-  location: data/source/MNISTMini/
+  location: data/MNISTSplit/ #S3://mopc-s202798-mlpipe-datasets/MNISTSplit/
   img-res: [28,28]
   greyscale: true
 
@@ -27,6 +27,6 @@ validation:
   folds: 2
 
 deployment:
-  min_test_score: 0.80
-  endpoint_name: MOPCTestEndpoint
+  min_test_score: 0.99
+  endpoint_name: MOPCTestEndpointV3
   instance_type: ml.m4.xlarge
